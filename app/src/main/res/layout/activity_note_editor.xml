@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/my_toolbarNewNote"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+        <EditText
+            android:id="@+id/editTextNewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1"
+            android:layout_gravity="left|top"
+            style="@style/CardView"
+            android:hint="@string/note_s_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            ></EditText>
+        <EditText
+            android:id="@+id/editTextNewNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:inputType="textMultiLine"
+            android:layout_gravity="left|top"
+            android:hint="@string/note_s_text"
+            style="@style/CardView"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            ></EditText>
+
+        <CheckBox
+            android:id="@+id/checkBoxDeadline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/has_deadline"
+            android:layout_marginTop="200dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextDeadline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|top"
+                android:inputType="date"
+                android:layout_weight="7"
+                android:hint="@string/deadline_day"
+                style="@style/CardView"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                ></EditText>
+
+            <ImageButton
+                android:id="@+id/imageButtonCalendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|top"
+                android:layout_weight="1"
+                app:srcCompat="@android:drawable/ic_menu_month" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
